@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corazón Latente</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos específicos para el corazón */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fad7df;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .heart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 200px;
+      height: 180px;
+      animation: heartbeat 1s infinite;
+    }
+
+    .heart-shape {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: #fe3334;
+      transform: rotate(-45deg);
+    }
+
+    .heart-shape::before,
+    .heart-shape::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fe3334;
+      border-radius: 50%;
+    }
+
+    .heart-shape::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart-shape::after {
+      left: 50px;
+      top: 0;
+    }
+
+    .date-text {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      bottom:40%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      white-space: nowrap; /* Asegura que el texto no se envuelva */
+      z-index: 1; /* Asegura que el texto esté encima del corazón */
+      margin: 20px; /* Margen alrededor del texto */
+      text-align: center;
+    }
+
+    .gif-container {
+      display: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-container">
+    <div class="heart-shape">
+      <div class="date-text">01/06/24</div>
+    </div>
+  </div>
+
+  <div class="gif-container">
+    <!-- Aquí está el iframe del GIF de Giphy -->
+    <iframe src="https://giphy.com/embed/IzXiddo2twMmdmU8Lv" width="100%" height="auto" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const gifContainer = document.querySelector('.gif-container');
+      gifContainer.style.display = 'block';
+
+      const heartContainer = document.querySelector('.heart-container');
+      heartContainer.style.display = 'none';
+
+      const messageContainer = document.createElement('div');
+      messageContainer.innerText = 'TE ADORO MI AMOR, ERES LO MAS BONITO QUE ME HA PASADO EN LA VIDA';
+      messageContainer.style.fontSize = '2rem';
+      messageContainer.style.fontWeight = 'bold';
+      messageContainer.style.color = '#fe3334';
+      messageContainer.style.textAlign = 'center';
+      messageContainer.style.margin = '20px'; /* Margen alrededor del texto */
+      document.body.appendChild(messageContainer);
+
+      setTimeout(() => {
+        window.close();
+      }, 3000); // Cerrar la ventana después de 3 segundos
+    }, 2000); // Mostrar el GIF y el mensaje después de 3 segundos
+  </script>
+</body>
+</html>

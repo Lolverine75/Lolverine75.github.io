@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fad7df;
+  height: 100vh;
+  position: relative;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fad7df;
+}
+
+.rosa {
+  width: 100%;
+  height: 100%;
+  background-color: #fad7df;
+  position: relative;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 36px;
+  color: #fe3334;
+  text-align: center;
+}
+.boton-sweetalert {
+  color: #ff3234;
+  font-weight: 600;
+  border-radius: 3px;
+  background: #fad7df;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fe3334;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Ajusta este valor para el espacio entre los botones */
+}
+
+.boton-sweetalert:hover {
+  background-color: #ff989e;
+  color: white; /* Añadido para que el texto sea blanco al hacer hover */
+}
+
+
+.boton {
+  color: #ff3234;
+  font-weight: 600;
+  border-radius: 3px;
+  background: #fad7df;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fe3334;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Ajusta este valor para el espacio entre los botones */
+}
+
+.boton:hover {
+  background-color: #ff989e;
+  color: white; /* Añadido para que el texto sea blanco al hacer hover */
+}
+
+.contenedor {
+  text-align: center;
+}
+
+.imagen {
+  width: 200px;
+  height: 200px;
+  transition: opacity 1s;
+  background-color: white;  
+}   
+
+.rojo {
+  color: red;
+}
+
+.individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: white;
+  z-index: 1;
+}
+
+/* Estilos adicionales para el proyecto */
+.corazon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 180px;
+  animation: heartbeat 1s infinite;
+  margin-top: 20px; /* Espaciado hacia arriba */
+}
+
+.corazon-shape {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fe3334;
+  transform: rotate(-45deg);
+}
+
+.corazon-shape::before,
+.corazon-shape::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #fe3334;
+  border-radius: 50%;
+}
+
+.corazon-shape::before {
+  top: -50px;
+  left: 0;
+}
+
+.corazon-shape::after {
+  left: 50px;
+  top: 0;
+}
+
+.mensaje {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fe3334;
+  text-align: center;
+  margin-top: 20px; /* Espaciado hacia arriba */
+}
